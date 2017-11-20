@@ -1,8 +1,8 @@
-# pwa-vue-express-http1-boilerplate
+# PWA Vuejs with Express and HTTP/1x
 
-> Progressive Web App with Vuejs running on express server with http version 1.x.
+> Progressive Web App with Vuejs running on express server with http/1.x
 
-> AWS Cognito authentication on a hosted amazon site and other social login (Facebook, Google, Github)
+> AWS Cognito User Pools authentication on a hosted amazon site and federated identities (Facebook, Google, Github) authentication
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
@@ -28,7 +28,8 @@ $ npm run dev
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
 ## Side Noe
-For authentication with hosted AWS Cognito to work, it needs to configure the webserver to be extactly https://localhost:8443 or it won't work
+- For authentication with hosted AWS Cognito to work, it needs to configure the webserver to be extactly https://localhost:8443 or it won't work
+- This template is inspired by https://github.com/PaulMaddox/aws-vuejs-cognito
 
 ## What's Included
 
