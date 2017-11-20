@@ -27,8 +27,8 @@ $ npm run dev
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
-##Side Noe
-For the site to work, it needs to configure the webserver to be extactly https://localhost:8443 or it won't work
+## Side Noe
+For authentication with hosted AWS Cognito to work, it needs to configure the webserver to be extactly https://localhost:8443 or it won't work
 
 ## What's Included
 

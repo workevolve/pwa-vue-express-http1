@@ -14,7 +14,7 @@ module.exports = {
     port: process.env.HOST || 8080
   },
   https: {
-    port: 443,
+    port: 8443,
     options: {
       key: fs.readFileSync(path.resolve(process.cwd(), 'build/certs/localhost.key'), 'utf8').toString(),
       cert: fs.readFileSync(path.resolve(process.cwd(), 'build/certs/localhost.crt'), 'utf8').toString(),
