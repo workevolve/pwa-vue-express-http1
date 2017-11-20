@@ -2,9 +2,26 @@
 // Template version: 1.2.3
 // see http://vuejs-templates.github.io/webpack for documentation.
 
+const fs = require('fs')
 const path = require('path')
 
 module.exports = {
+  // Various Dev Server settings
+  host: 'localhost', // can be overwritten by process.env.HOST
+  http: {
+    // default port where dev server listens for incoming traffic
+    // can be overwritten by process.env.HOST, if port is in use, a free one will be determined
+    port: process.env.HOST || 8080
+  },
+  https: {
+    port: 443,
+    options: {
+      key: fs.readFileSync(path.resolve(process.cwd(), 'build/certs/localhost.key'), 'utf8').toString(),
+      cert: fs.readFileSync(path.resolve(process.cwd(), 'build/certs/localhost.crt'), 'utf8').toString(),
+      requestCert: false,
+      rejectUnauthorized: false
+    }
+  },
   dev: {
     env: require('./dev.env'),
 
@@ -12,10 +29,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
-
-    // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.HOST, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
